@@ -95,7 +95,7 @@ opencv.openCamera();
 
 function grabCroppedFaceAsJpeg(onComplete) {
 	async.waterfall([
-		opencv.grabImage,
+	    opencv.grabImage,
   	    function (image, callback) {
   	    	opencv.detectFaces(image, function(err, faces) {
   	    		if (err) callback(err);
