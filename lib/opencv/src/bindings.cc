@@ -138,6 +138,11 @@ inline void detectFaces(uv_work_t *req) {
 	int heighInc;
 	int widthInc;
 	for(size_t i=0; i<faces->size(); i++) {
+		//
+		// enlarge the detected face rect by 25% 
+		// sometimes the rect is small and does not get the whole face
+		// so we enlarge proportionally
+		//
 		widthInc = _faces[i].width/4;
 		heighInc = _faces[i].height/4;
 		x = _faces[i].x - widthInc;
