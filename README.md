@@ -45,7 +45,31 @@ A face is not detected 100% of the time, there is false positives around 10-20% 
 		}
 	});
 	
-`releaseImage`: frees the memory of the image you got from grabImage. Must do this after you are done using the image.
+`releaseImage`: frees the memory of the image you got from grabImage.
+
+`detectFaces`: detect faces, must pass in the image and a callback for the detected faces.
+
+	Example:
+	opencv.detectFaces(image, function(err, faces) {
+		if (!err) {
+			//faces = 
+		}
+	});
+	
+
+
+## Face JavaScript Data Structure
+
+If you look at the `bindings.cc` you will find:
+	Local<Object> jsFace = Nan::New<Object>();
+	jsFace->Set(Nan::New("x").ToLocalChecked(), Nan::New<Int32>(faces[i].x));
+	jsFace->Set(Nan::New("width").ToLocalChecked(), Nan::New<Int32>(faces[i].width));
+	jsFace->Set(Nan::New("y").ToLocalChecked(), Nan::New<Int32>(faces[i].y));
+	jsFace->Set(Nan::New("height").ToLocalChecked(), Nan::New<Int32>(faces[i].height));
+	jsFaces->Set(i, jsFace);
+As you can see there is face.x, face.width, face.y, and face.height.
+These are the coordinates of the face inside the grabbed image.
+You can use `crop.crop(image, face)` to crop it out into another image.
 
 ## Sample Code
 
