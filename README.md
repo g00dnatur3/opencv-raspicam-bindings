@@ -4,7 +4,7 @@ Example project to demonstrate how to do NodeJS Bindings to OpenCV & Raspicam C+
 
 ## Requirements
 
-You need a Raspberry Pi with a camera Module.
+You need a Raspberry Pi with a camera module.
 
 You need to have the following software compiled and installed:
 
