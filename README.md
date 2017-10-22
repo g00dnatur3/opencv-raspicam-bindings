@@ -12,7 +12,8 @@ You need to have the following software compiled and installed:
 * OpenCV 3.2
 * raspicam 0.1.6 `https://www.uco.es/investiga/grupos/ava/node/40`
 
-I included the scripts to download and build those dependencies.
+I included scripts to download and build those dependencies.
+
 Please take a look  in the `/build-scripts` directory.
 
 ## Usage
