@@ -22,7 +22,7 @@ To run the example do this:
 
 > node test/example.js
 
-The example will keep grabbing a images and trying to detect a face.
+The example will keep grabbing images and trying to detect a face.
 The first face that is detected will be cropped out and saved to sample.jpg.
 
 ## OpenCV Binding Info
