@@ -32,20 +32,20 @@ A face is not detected 100% of the time, there is false positives around 10-20% 
 
 ## Binding API
 
-	`openCamera` : opens the camera, does not take any parameters, is synchronous.
-	
-	`closeCamera`: closes the camera, does not take any parameters, is synchronous.
-	
-	'grabImage'  : grabs and returns a pointer to an image asynchronously
+`openCamera` : opens the camera, does not take any parameters, is synchronous.
 
-		Example:
-		```
-		opencv.grabImage(function(err, image) {
-			if (!err) {
-				//image -> pointer to OpenCV Mat object
-			}
-		});
-		```
+`closeCamera`: closes the camera, does not take any parameters, is synchronous.
+
+'grabImage'  : grabs and returns a pointer to an image asynchronously.
+
+	Example:
+	```
+	opencv.grabImage(function(err, image) {
+		if (!err) {
+			//image -> pointer to OpenCV Mat object
+		}
+	});
+	```
 
 ## Sample Code
 
