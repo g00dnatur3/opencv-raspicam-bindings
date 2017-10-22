@@ -8,7 +8,6 @@ VideoCapture cap;
 
 CascadeClassifier faceCascade;
 double cvImageFormat;
-Ptr<FaceRecognizer> model;
 
 NAN_METHOD(OpenCamera) {
 	if (camera.isOpened()) {
@@ -236,7 +235,6 @@ void init(Local<Object> target, Handle<Object> module) {
 	Local<Value> lbpcascadeFrontalface = Nan::MakeCallback(target, resolve, 2, resolveArgs);
 
 	faceCascade.load(toCharArray(lbpcascadeFrontalface));
-	model = createLBPHFaceRecognizer(10);
 }
 
 NODE_MODULE(bindings, init)
