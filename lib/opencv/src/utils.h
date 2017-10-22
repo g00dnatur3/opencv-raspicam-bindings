@@ -65,34 +65,3 @@ inline Rect toRect(Local<Object> jsRect, char *err) {
 		return Rect(x->Int32Value(), y->Int32Value(), width->Int32Value(), height->Int32Value());
 	}
 }
-
-inline vector<string> toStringArray(Handle<Array> jsArray) {
-	vector<string> array;
-	int len = jsArray->Length();
-	array.reserve(len);
-	for (int i = 0; i < len; i++) {
-		array.push_back(string(toCharArray(jsArray->Get(i))));
-	}
-	return array;
-}
-
-inline vector<int> toIntArray(Handle<Array> jsArray) {
-	vector<int> array;
-	int len = jsArray->Length();
-	array.reserve(len);
-	for (int i = 0; i < len; i++) {
-		array.push_back(jsArray->Get(i)->Int32Value());
-	}
-	return array;
-}
-
-inline vector<Mat> toImageArray(Handle<Array> jsArray) {
-	vector<Mat> array;
-	int len = jsArray->Length();
-	array.reserve(len);
-	for (int i = 0; i < len; i++) {
-		Mat *image = reinterpret_cast<Mat *>(UnwrapPointer(jsArray->Get(i)));
-		array.push_back(gray(*image));
-	}
-	return array;
-}
