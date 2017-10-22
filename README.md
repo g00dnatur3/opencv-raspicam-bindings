@@ -44,13 +44,21 @@ A face is not detected 100% of the time, there is false positives around 10-20% 
 		}
 	});
 	
-`releaseImage`: frees the memory of the image you got from grabImage.
+`releaseImage`: frees the memory of the image you got from grabImage() or crop().
 
 `detectFaces`: detect faces, must pass in the image and a callback for the detected faces.
 
 	opencv.detectFaces(image, function(err, faces) {
 		if (!err) {
 			//faces = detected faces
+		}
+	});
+	
+`crop`  : crop a face image out, must face in the image and the face. 
+
+	opencv.crop(image, face, function(err, cropped) {
+		if (!err) {
+			//cropped -> image of the cropped face
 		}
 	});
 	
