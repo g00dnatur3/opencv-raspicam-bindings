@@ -1,6 +1,6 @@
 # Raspicam + OpenCV Bindings for NodeJS
 
-Example to demonstrate how to do NodeJS Binding With OpenCV.
+Example project to demonstrate how to do NodeJS Bindings to OpenCV & Raspicam C++ Library.
 
 ## Requirements
 
