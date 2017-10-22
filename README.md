@@ -38,7 +38,6 @@ A face is not detected 100% of the time, there is false positives around 10-20% 
 
 `grabImage`  : grabs and returns a pointer to an image asynchronously.
 
-	Example:
 	opencv.grabImage(function(err, image) {
 		if (!err) {
 			//image -> pointer to OpenCV Mat object
@@ -49,7 +48,6 @@ A face is not detected 100% of the time, there is false positives around 10-20% 
 
 `detectFaces`: detect faces, must pass in the image and a callback for the detected faces.
 
-	Example:
 	opencv.detectFaces(image, function(err, faces) {
 		if (!err) {
 			//faces = detected faces
@@ -58,7 +56,6 @@ A face is not detected 100% of the time, there is false positives around 10-20% 
 	
 `encodeToJpeg`: encode an image to jpeg, pass in the image, quality, and a callback for the jpeg result.
 
-	Example:
 	opencv.encodeToJpeg(image, 94, function(err, jpeg) {
 		if (!err) {
 			//jpeg = data of image converted to jpeg
