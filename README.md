@@ -86,7 +86,7 @@ As you can see there is
 	face = {x, width, y, height}
 
 These are the coordinates of the face inside the grabbed image.
-You can use `crop.crop(image, face)` to crop it out into another image.
+You can use `opencv.crop(image, face, onComplete)` to crop it out into another image.
 
 ## Sample Code
 
