@@ -39,13 +39,11 @@ A face is not detected 100% of the time, there is false positives around 10-20% 
 `grabImage`  : grabs and returns a pointer to an image asynchronously.
 
 	Example:
-	```
 	opencv.grabImage(function(err, image) {
 		if (!err) {
 			//image -> pointer to OpenCV Mat object
 		}
 	});
-	```
 
 ## Sample Code
 
