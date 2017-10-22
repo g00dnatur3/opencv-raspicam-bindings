@@ -30,6 +30,23 @@ The first face that is detected will be cropped out and saved to sample.jpg.
 The binding uses the `lbpcascade_frontalface.xml` classifier to detect faces.
 A face is not detected 100% of the time, there is false positives around 10-20% of the time.
 
+## Binding API
+
+	`openCamera` : opens the camera, does not take any parameters, is synchronous.
+	
+	`closeCamera`: closes the camera, does not take any parameters, is synchronous.
+	
+	'grabImage'  : grabs and returns a pointer to an image asynchronously
+
+		Example:
+		```
+		opencv.grabImage(function(err, image) {
+			if (!err) {
+				//image -> pointer to OpenCV Mat object
+			}
+		});
+		```
+
 ## Sample Code
 
 ```
