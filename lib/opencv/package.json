@@ -1,0 +1,15 @@
+{
+	"name": "opencv",
+	"dependencies": {
+		"nan": "^2.5.1"
+	},
+	"description": "opencv bindings",
+	"engines": {
+		"node": ">= 0.8.0"
+	},
+	"main": "./lib/opencv",
+	"scripts": {
+		"install": "cmake-js build"
+	},
+	"version": "0.0.01"
+}

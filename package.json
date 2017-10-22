@@ -1,0 +1,19 @@
+{
+  "name": "opencv-raspicam-bindings",
+  "version": "0.0.1",
+  "description": "",
+  "dependencies": {
+	"bindings": "^1.2.1",
+	"async": "*",
+	"node-log": "https://github.com/g00dnatur3/node-log.git"
+  },
+  "contributors": [
+    {
+      "name": "John Bouchard",
+      "email": "john.bouchard@hp.com"
+    }
+  ],
+  "scripts": { 
+  },
+  "license": "Apache-2.0"
+}
