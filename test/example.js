@@ -2,7 +2,9 @@ const log = require('node-log').log();
 const opencv = require('../lib/opencv');
 const async = require('async');
 
-
+//
+//	This example detects a face, crops it, and saves it as sample.jpg
+//
 
 opencv.openCamera();
 

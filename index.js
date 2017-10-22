@@ -1,1 +1,1 @@
-const opencv = require('');
+module.exports = require('../lib/opencv');

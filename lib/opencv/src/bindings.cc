@@ -32,7 +32,7 @@ NAN_METHOD(CloseCamera) {
 }
 
 inline void grabImage(uv_work_t *req) {
-	int ts = timeNowMillis();
+	//int ts = timeNowMillis();
 	GrabImageBaton *baton = static_cast<GrabImageBaton *>(req->data);
 	if (camera.isOpened()) {
 		if (!camera.isOpened()) {
@@ -54,7 +54,7 @@ inline void grabImage(uv_work_t *req) {
 		}
 	}
 	else log("error: camera/pipeline not open");
-    log("completed in %d ms", timeNowMillis()-ts);
+    //log("completed in %d ms", timeNowMillis()-ts);
 }
 
 inline void grabImageAfter(uv_work_t *req, int status) {

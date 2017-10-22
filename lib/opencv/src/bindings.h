@@ -35,10 +35,3 @@ struct GrabImageBaton {
 	Nan::Persistent<Function> callback;
 	char *err = NULL;
 };
-
-struct OpenPipelineBaton {
-	char *pipeline;
-	uv_work_t request;
-	Nan::Persistent<Function> callback;
-	char *err = NULL;
-};
