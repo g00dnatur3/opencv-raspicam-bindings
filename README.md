@@ -52,11 +52,18 @@ A face is not detected 100% of the time, there is false positives around 10-20% 
 	Example:
 	opencv.detectFaces(image, function(err, faces) {
 		if (!err) {
-			//faces = 
+			//faces = detected faces
 		}
 	});
 	
+`encodeToJpeg`: encode an image to jpeg, pass in the image, quality, and a callback for the jpeg result.
 
+	Example:
+	opencv.encodeToJpeg(image, 94, function(err, jpeg) {
+		if (!err) {
+			//jpeg = data of image converted to jpeg
+		}
+	});
 
 ## Face JavaScript Data Structure
 
@@ -69,7 +76,10 @@ If you look at the `bindings.cc` you will find:
 	jsFace->Set(Nan::New("height").ToLocalChecked(), Nan::New<Int32>(faces[i].height));
 	jsFaces->Set(i, jsFace);
 	
-As you can see there is face.x, face.width, face.y, and face.height.
+As you can see there is 
+	
+	face = {x, width, y, height}
+
 These are the coordinates of the face inside the grabbed image.
 You can use `crop.crop(image, face)` to crop it out into another image.
 
