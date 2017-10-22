@@ -44,6 +44,8 @@ A face is not detected 100% of the time, there is false positives around 10-20% 
 			//image -> pointer to OpenCV Mat object
 		}
 	});
+	
+`releaseImage`: frees the memory of the image you got from grabImage. Must do this after you are done using the image.
 
 ## Sample Code
 
