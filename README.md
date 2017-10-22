@@ -36,7 +36,7 @@ A face is not detected 100% of the time, there is false positives around 10-20% 
 
 `closeCamera`: closes the camera, does not take any parameters, is synchronous.
 
-'grabImage'  : grabs and returns a pointer to an image asynchronously.
+`grabImage`  : grabs and returns a pointer to an image asynchronously.
 
 	Example:
 	```
