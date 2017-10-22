@@ -45,7 +45,6 @@ cd build
 
 cmake \
 	-D OPENCV_EXTRA_MODULES_PATH=$HOME/opencv/opencv_contrib-3.2.0/modules \
-	-D WITH_GSTREAMER=ON \
 	-D CMAKE_BUILD_TYPE=Release \
 	-D CMAKE_INSTALL_PREFIX=/usr/local ..
 	
