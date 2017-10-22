@@ -4,7 +4,6 @@ const int CAP_WIDTH = 1280;
 const int CAP_HEIGHT = 720;
 
 RaspiCam camera;
-VideoCapture cap;
 
 CascadeClassifier faceCascade;
 double cvImageFormat;
@@ -12,10 +11,6 @@ double cvImageFormat;
 NAN_METHOD(OpenCamera) {
 	if (camera.isOpened()) {
 		log("error: camera already opened");
-		return;
-	}
-	if (cap.isOpened()) {
-		log("error: pipeline already opened");
 		return;
 	}
 	camera.open() ? log("success") : log("error: malfunction");
@@ -45,14 +40,7 @@ inline void grabImage(uv_work_t *req) {
 		baton->image = new Mat(camera.getHeight(), camera.getWidth(), cvImageFormat);
 		camera.retrieve(baton->image->ptr<uchar>(0));
 	}
-	else if (cap.isOpened()) {
-		baton->image = new Mat;
-		if (!cap.read(*baton->image)) {
-			baton->err = (char *) "error: failed to read from pipeline";
-			log(baton->err); delete baton->image; return;
-		}
-	}
-	else log("error: camera/pipeline not open");
+	else log("error: camera not open");
     //log("completed in %d ms", timeNowMillis()-ts);
 }
 
