@@ -1,4 +1,4 @@
-# Raspicam + OpenCV Face Detection Bindings for NodeJS
+# Raspicam + OpenCV Bindings for NodeJS
 
 Example project to demonstrate how to do NodeJS Bindings to OpenCV & Raspicam C++ Library.
 
