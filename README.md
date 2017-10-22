@@ -61,12 +61,14 @@ A face is not detected 100% of the time, there is false positives around 10-20% 
 ## Face JavaScript Data Structure
 
 If you look at the `bindings.cc` you will find:
+
 	Local<Object> jsFace = Nan::New<Object>();
 	jsFace->Set(Nan::New("x").ToLocalChecked(), Nan::New<Int32>(faces[i].x));
 	jsFace->Set(Nan::New("width").ToLocalChecked(), Nan::New<Int32>(faces[i].width));
 	jsFace->Set(Nan::New("y").ToLocalChecked(), Nan::New<Int32>(faces[i].y));
 	jsFace->Set(Nan::New("height").ToLocalChecked(), Nan::New<Int32>(faces[i].height));
 	jsFaces->Set(i, jsFace);
+	
 As you can see there is face.x, face.width, face.y, and face.height.
 These are the coordinates of the face inside the grabbed image.
 You can use `crop.crop(image, face)` to crop it out into another image.
