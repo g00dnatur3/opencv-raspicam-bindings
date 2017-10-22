@@ -54,7 +54,7 @@ A face is not detected 100% of the time, there is false positives around 10-20% 
 		}
 	});
 	
-`crop`  : crop a face image out, must face in the image and the face. 
+`crop` : crop a face image out, must face in the image and the face. 
 
 	opencv.crop(image, face, function(err, cropped) {
 		if (!err) {
