@@ -83,7 +83,7 @@ If you look at the `bindings.cc` you will find:
 	
 As you can see there is 
 	
-	face = {x, width, y, height} // basically an OpenCV Rect converted to js object
+	jsFace = {x, width, y, height} // basically an OpenCV Rect converted to js object
 
 These are the coordinates of the face inside the grabbed image.
 You can use `opencv.crop(image, face, onComplete)` to crop it out into another image.
