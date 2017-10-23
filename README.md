@@ -87,8 +87,8 @@ As you can see there is
 
 These are the coordinates of the face inside the grabbed image.
 You can use `opencv.crop(image, face, onComplete)` to crop it out into another image.
-The face is converted to an OpenCV Rect Object when crop is called, inside `utils.h`:
 
+The face is converted to an OpenCV Rect Object when crop is called, inside `utils.h`:
 `inline Rect toRect(Local<Object> jsRect, char *err)`
 
 ## Sample Code
