@@ -54,13 +54,9 @@ A face is not detected 100% of the time, there is false positives around 10-20% 
 		}
 	});
 	
-`crop` : crop a face image out, must pass in the image, face, and a callback for the cropped image. 
+`crop` : synchronously crop a face image out, must pass in the image and a face. 
 
-	opencv.crop(image, face, function(err, cropped) {
-		if (!err) {
-			//cropped -> image of the cropped face
-		}
-	});
+	const cropped = opencv.crop(image, face);
 	
 `encodeToJpeg`: encode an image to jpeg, pass in the image, quality, and a callback for the jpeg.
 
