@@ -28,7 +28,7 @@ The first face that is detected will be cropped out and saved to sample.jpg.
 ## OpenCV Binding Info
 
 The binding uses the `lbpcascade_frontalface.xml` classifier to detect faces.
-A face is not detected 100% of the time, there is false positives around 10-20% of the time.
+A face is not detected 100% of the time, there are false positives around 10-20% of the time.
 
 ## Binding API
 
